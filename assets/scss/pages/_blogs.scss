@@ -1,0 +1,121 @@
+#blogs {
+  .blogs {
+    padding: 111px 0px 70px;
+    background-image: url(/assets/img/backgroung-image.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-main {
+      max-width: 820px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(32%, 269px));
+      grid-auto-rows: auto;
+      justify-content: space-between;
+      margin: 0 auto 107px;
+      gap: 32px 7px;
+
+      .card-blog {
+        &:nth-child(1n) {
+          &::after {
+            background-color: var(--pink);
+          }
+          span {
+            color: var(--pink);
+          }
+        }
+        &:nth-child(2n) {
+          &::after {
+            background-color: var(--green-dark);
+          }
+          span {
+            color: var(--green-dark);
+          }
+        }
+        &:nth-child(3n) {
+          &::after {
+            background-color: var(--gray);
+          }
+          span {
+            color: var(--gray);
+          }
+        }
+        &:nth-child(4n) {
+          &::after {
+            background-color: var(--green-light);
+          }
+          span {
+            color: var(--green-light);
+          }
+        }
+        &:nth-child(5n) {
+          &::after {
+            background-color: var(--yellow-light);
+          }
+          span {
+            color: var(--yellow-light);
+          }
+        }
+      }
+
+      @include breakpoint(tab_port) {
+        grid-template-columns: repeat(2, minmax(32%, 269px));
+        place-content: center;
+      }
+      @include breakpoint(phone) {
+        grid-template-columns: 269px;
+      }
+    }
+    &-pagination,
+    .nav-links {
+      @extend .flex;
+
+      max-width: max-content;
+      margin: 0 auto;
+
+      span,
+      .page-numbers {
+        @extend .fs-13;
+        @extend .fw-semibold;
+        @extend .clr-gray;
+        @extend .no-deco;
+
+        display: grid;
+        place-content: center;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: var(--white);
+        box-shadow: 0px 0px 12px var(--black-40);
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0px 5px;
+      }
+    }
+    .current {
+      background-color: var(--green-light) !important;
+      color: var(--white) !important;
+    }
+    .prev,
+    .next {
+      @extend .relative;
+      color: transparent !important;
+
+      &::after {
+        content: "\f053";
+        position: absolute;
+        font-family: "Font Awesome 5 Free";
+        top: 50%;
+        left: 50%;
+        color: var(--gray);
+        transform: translate(-50%, -50%);
+      }
+    }
+    .next {
+      &::after {
+        transform: translate(-50%, -50%) rotate(-180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+#about-us {
+  .about-us {
+    padding: 71px 0px 80px;
+    background-image: url(/assets/img/backgroung-image.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .container {
+      & > h1.section-heading {
+        max-width: 530px;
+        margin-bottom: 49px;
+
+        & + p {
+          @extend .fs-14;
+          @extend .fw-regular;
+          @extend .lh-19;
+          @extend .clr-gray;
+          @extend .text-center;
+          margin: 0px auto 85px;
+          max-width: 604px;
+        }
+      }
+    }
+    &-mission-vision {
+      @extend .flex;
+      max-width: 836px;
+      margin: 0 auto;
+
+      @include breakpoint(tab_land) {
+        flex-direction: column;
+      }
+    }
+    &-mission,
+    &-vision {
+      width: 398px;
+      height: 386px;
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      background-color: var(--white);
+      margin-bottom: 169px;
+
+      h3 {
+        @extend .capitalize;
+        width: fit-content;
+
+        &::after {
+          width: 80px;
+          height: 6.82px;
+          bottom: -11.72px;
+        }
+      }
+      p {
+        @extend .fs-14;
+        @extend .fw-regular;
+        @extend .lh-19;
+        @extend .clr-gray;
+        @extend .text-center;
+        max-width: 270px;
+        margin-top: 51px;
+
+        @include breakpoint(phone) {
+          font-size: 12px;
+          padding: 0px 20px;
+          margin-top: 30px;
+        }
+      }
+      @include breakpoint(phone) {
+        width: 270px;
+        height: 270px;
+      }
+    }
+    &-vision {
+      margin-right: 15px;
+      box-shadow: 0px 16px 31px inset var(--black-9), 0 8px 46px var(--black-6), -6px 30px 0px var(--yellow-light),
+        -48px -6px 0px var(--green-light), 16px -33px 0px var(--gray);
+
+      @include breakpoint(tab_land) {
+        margin: 0px auto 90px;
+      }
+      @include breakpoint(phone) {
+        margin: 0px auto 50px;
+        box-shadow: 0px 16px 31px inset var(--black-9), 0 8px 46px var(--black-6), -4px 18px 0px var(--yellow-light),
+          -22px -8px 0px var(--green-light), 8px -22px 0px var(--gray);
+      }
+    }
+    &-mission {
+      box-shadow: 0px 16px 31px inset var(--black-9), 4px -33px 0px var(--pink), 39.2px -11.8px 0px var(--green-dark),
+        0 8px 46px var(--black-6), 0.2px 36px 0px var(--gray);
+
+      @include breakpoint(phone) {
+        box-shadow: 0px 16px 31px inset var(--black-9), 4px -22px 0px var(--pink), 22px -11.8px 0px var(--green-dark),
+          0 8px 46px var(--black-6), 0.2px 22px 0px var(--gray);
+      }
+    }
+    &-story {
+      @extend .flex;
+      max-width: 788px;
+      width: 100%;
+      margin: 0 auto 146px;
+
+      &-left {
+        max-width: 537px;
+        margin-right: 12px;
+
+        h3 {
+          @extend .capitalize;
+          margin: 0 0 34px;
+
+          &::after {
+            width: 116px;
+            height: 8.42px;
+            left: 0;
+            bottom: -13.42px;
+            transform: unset;
+          }
+          @include breakpoint(tab_land) {
+            margin: 15px auto 34px;
+          }
+        }
+        p {
+          @extend .fs-16;
+          @extend .fw-regular;
+          @extend .lh-21;
+          @extend .clr-gray;
+        }
+      }
+      &-right {
+        max-width: 238.58px;
+        width: 100%;
+
+        img {
+          @include img(100%, 277px);
+          // box-shadow: 0px 8px 30px var(--black-16);
+        }
+      }
+      @include breakpoint(tab_land) {
+        flex-direction: column-reverse;
+      }
+    }
+    &-gallery {
+      max-width: 814px;
+      width: 100%;
+      margin: 0 auto;
+
+      h3.section-heading {
+        max-width: 618px;
+        margin-bottom: 109px;
+      }
+      div {
+        @extend .flex;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        img {
+          @include img(190px, 190px);
+          border-radius: 50%;
+          margin: 0px 5px 20px;
+          box-shadow: 0px 4px 25px var(--black-16);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+.topbar {
+  padding: 6px 6px 6.79px;
+  background-color: var(--white);
+  box-shadow: 0px 3px 11px var(--black-6);
+
+  &-main {
+    @extend .flex;
+  }
+  &-left {
+    @extend .flex;
+    width: fit-content;
+
+    a {
+      @extend .fs-11;
+      @extend .fw-semibold;
+      @extend .clr-gray;
+      @extend .lh-13;
+      @extend .no-deco;
+      @extend .block;
+
+      i {
+        margin-right: 5px;
+      }
+      &:first-of-type {
+        margin-right: 28.8px;
+
+        i {
+          color: var(--green-light);
+        }
+        @include breakpoint(tab_land) {
+          margin-right: 10px;
+        }
+      }
+      &:last-of-type {
+        i {
+          color: var(--yellow-medium);
+        }
+      }
+    }
+  }
+  &-right {
+    @extend .flex;
+    width: fit-content;
+
+    a {
+      @extend .fs-13;
+      @extend .clr-gray;
+      @extend .block;
+
+      &:first-of-type {
+        margin-right: 10.9px;
+      }
+    }
+  }
+  @include breakpoint(tab_land) {
+    padding: 6px 0px;
+  }
+}
+.header {
+  padding: 7px 0px 10px;
+
+  &-main {
+    @extend .flex;
+
+    a.custom-logo-link {
+      max-width: 77px;
+
+      img {
+        @include img(100%, 60px);
+      }
+    }
+    @include breakpoint(tab_land) {
+      flex-wrap: wrap;
+    }
+  }
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    margin-left: auto;
+
+    ul {
+      @extend .list-none;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+
+      li {
+        @extend .block;
+        @extend .relative;
+        @extend .uppercase;
+
+        &::after {
+          @include absolute(null, null, -6.5px, 0, 0%, 1px, true);
+          background-color: var(--green-light);
+          transition: 0.5s ease;
+        }
+        &:hover {
+          a {
+            color: var(--green-light);
+            box-shadow: 0px 0px -5px var(--black-6);
+          }
+          &::after {
+            width: 60%;
+
+            @include breakpoint(tab_land) {
+              width: 0%;
+            }
+          }
+        }
+        &:not(:last-of-type) {
+          margin-right: 27px;
+        }
+
+        a {
+          @extend .no-deco;
+          @extend .font-bubble;
+          @extend .fs-15;
+          @extend .fw-regular;
+          @extend .lh-18;
+          @extend .clr-gray;
+        }
+        @include breakpoint(tab_land) {
+          padding: 10px 0px;
+          width: 100%;
+          border-bottom: 1px solid var(--gray);
+        }
+      }
+      @include breakpoint(desktop) {
+        padding: 0 5px;
+      }
+      @include breakpoint(tab_land) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding: 20px 0;
+      }
+    }
+    a.btn-header {
+      margin-left: auto;
+    }
+    @include breakpoint(tab_land) {
+      display: none;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      -ms-flex-positive: 1;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      -ms-flex-align: center;
+      -webkit-box-align: start;
+      align-items: flex-start;
+      width: 100%;
+      z-index: 2;
+      display: none;
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+      background-color: #fff;
+      padding: 20px 0;
+    }
+  }
+  &-toggler {
+    @extend .d-none;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      @extend .fs-20;
+      @extend .clr-gray;
+    }
+
+    @include breakpoint(tab_land) {
+      display: flex;
+    }
+  }
+}

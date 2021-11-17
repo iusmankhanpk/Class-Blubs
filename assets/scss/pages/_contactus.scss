@@ -1,0 +1,77 @@
+#contact-us {
+  .contact-us {
+    padding: 71px 0px 86px;
+    background-image: url(/assets/img/background-image-contact.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    h1.section-heading {
+      margin-bottom: 55px;
+
+      & + p {
+        @extend .fs-14;
+        @extend .fw-regular;
+        @extend .clr-gray;
+        @extend .lh-20;
+        @extend .text-center;
+        max-width: 460px;
+        margin: 0 auto 58px;
+      }
+    }
+    .form {
+      & + span {
+        @extend .block;
+        @extend .uppercase;
+        @extend .fs-15;
+        @extend .fw-bold;
+        @extend .clr-black;
+        @extend .lh-18;
+        width: fit-content;
+        margin: 0 auto 12px;
+      }
+    }
+    a.btn-whatsapp {
+      @extend .fs-12;
+      @extend .lh-14;
+      @extend .fw-bold;
+      background-color: var(--green-dark);
+      max-width: 307px;
+      margin: 0 auto;
+      display: flex;
+      padding: 10px;
+      border-radius: 3px;
+      box-shadow: 0px 6px 0px #26bfa1;
+      transition: all ease 0.3s;
+      &:hover {
+        box-shadow: 0px 6px 0px var(--green-dark);
+        background-color: #26bfa1;
+      }
+      i {
+        @extend .fs-16;
+        margin-right: 7px;
+      }
+    }
+  }
+  .join-us {
+    padding-bottom: 28px;
+
+    h1.section-heading {
+      max-width: 320px;
+      margin-bottom: 49px;
+      a {
+        @extend .fs-28;
+        color: var(--yellow-light);
+      }
+      & + p {
+        @extend .fs-14;
+        @extend .lh-21;
+        @extend .text-center;
+        @extend .fw-regular;
+        @extend .clr-gray;
+        max-width: 656px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

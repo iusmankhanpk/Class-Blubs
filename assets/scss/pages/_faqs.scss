@@ -1,0 +1,123 @@
+#faqs {
+  .faqs {
+    padding: 71px 0px 63px;
+    background-image: url(/assets/img/backgroung-image.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-main {
+      margin: 109px auto 0;
+      max-width: 812px;
+      width: 100%;
+    }
+
+    .accordion {
+      border-radius: 3px;
+      box-shadow: 0px 4px 16px var(--black-6);
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: all ease 0.2s;
+
+      &:nth-child(1n) {
+        i {
+          color: var(--yellow-light);
+        }
+        span {
+          &::after {
+            background-image: url(/assets/img/section-yellow-after.png);
+          }
+        }
+      }
+      &:nth-child(2n) {
+        i {
+          color: var(--green-dark);
+        }
+        span {
+          &::after {
+            background-image: url(/assets/img/section-green-dark-after.png);
+          }
+        }
+      }
+      &:nth-child(3n) {
+        i {
+          color: var(--green-light);
+        }
+        span {
+          &::after {
+            background-image: url(/assets/img/section-green-light-after.png);
+          }
+        }
+      }
+      &:nth-child(4n) {
+        i {
+          color: var(--pink);
+        }
+        span {
+          &::after {
+            background-image: url(/assets/img/section-pink-after.png);
+          }
+        }
+      }
+      &:nth-child(5n) {
+        i {
+          color: var(--gray);
+        }
+        span {
+          &::after {
+            background-image: url(/assets/img/section-gray-after.png);
+          }
+        }
+      }
+      &-header {
+        @extend .flex;
+        padding: 14px 28px 15px 18px;
+
+        span {
+          @extend .fs-16;
+          @extend .clr-gray;
+          @extend .lh-19;
+          @extend .fw-regular;
+          @extend .font-bubble;
+          @extend .relative;
+
+          &::after {
+            left: 0;
+            bottom: -24px;
+            transform: unset;
+            display: none;
+          }
+
+          @include breakpoint(tab_port) {
+            margin-right: 10px;
+          }
+        }
+        i.fa-minus {
+          @extend .d-none;
+        }
+      }
+      &-body {
+        padding: 34px 28px 15px 18px;
+      }
+      &-content {
+        @extend .fs-13;
+        @extend .clr-gray;
+        @extend .fw-regular;
+        @extend .lh-18;
+      }
+      .open {
+        i.fa-minus {
+          display: block;
+        }
+        i.fa-plus {
+          @extend .d-none;
+        }
+        span {
+          &::after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

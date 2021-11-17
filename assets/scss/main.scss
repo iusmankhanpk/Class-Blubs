@@ -1,0 +1,25 @@
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/section";
+
+@import "components/button";
+@import "components/card";
+@import "components/formatting";
+@import "components/post";
+
+@import "pages/home";
+@import "pages/aboutus";
+@import "pages/blogs";
+@import "pages/contactus";
+@import "pages/educator";
+@import "pages/faqs";
+@import "pages/partner";
+@import "pages/singleblog";
+@import "pages/terms";

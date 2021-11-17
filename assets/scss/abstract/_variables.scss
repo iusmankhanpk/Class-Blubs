@@ -1,0 +1,124 @@
+:root {
+  $white: #fff;
+  $black: #000;
+  $gray: #545455;
+  $gray-14: #54545524;
+  $btn: #3e3e3e;
+  $black-6: #0000000f;
+  $black-9: rgba(0, 0, 0, 0.09);
+  $black-16: #00000029;
+  $black-24: #0000003d;
+  $black-40: #00000066;
+  $input-bs: #3d3d3d12;
+  $green-dark: #32e4c1;
+  $green-dark-14: #34e5c124;
+  $green-light: #5ce0e6;
+  $green-light-14: #5cdfe624;
+  $yellow-dark: #f2ce3d;
+  $yellow-light: #f6e291;
+  $yellow-medium: #eecc42;
+  $yellow-medium-14: #eecc4224;
+  $pink: #f6adab;
+  $pink-14: #f6aeac24;
+
+  // LinearGradient
+  $lg-1: #2ecfaf36;
+  $lg-2: #eecc4236;
+  $lg-3: #55cbcf36;
+  $lg-4: #f2817d36;
+  $lg-5: #54545536;
+  $lg-6: #2ecfaf36;
+
+  // CSS variables
+  --white: #{$white};
+  --black: #{$black};
+  --gray: #{$gray};
+  --gray-14: #{$gray-14};
+  --black-40: #{$black-40};
+  --black-24: #{$black-24};
+  --black-16: #{$black-16};
+  --black-6: #{$black-6};
+  --black-9: #{$black-9};
+  --green-dark: #{$green-dark};
+  --green-dark-14: #{$green-dark-14};
+  --green-light: #{$green-light};
+  --green-light-14: #{$green-light-14};
+  --yellow-dark: #{$yellow-dark};
+  --yellow-light: #{$yellow-light};
+  --yellow-medium: #{$yellow-medium};
+  --yellow-medium-14: #{$yellow-medium-14};
+  --pink: #{$pink};
+  --pink-14: #{$pink-14};
+  --lg-1: #{$lg-1};
+  --lg-2: #{$lg-2};
+  --lg-3: #{$lg-3};
+  --lg-4: #{$lg-4};
+  --lg-5: #{$lg-5};
+  --lg-6: #{$lg-6};
+  --input-bs: #{$input-bs};
+  --btn: #{$btn};
+
+  // CONTAINER VARIABLES
+  --container: 1185px;
+
+  // FONT SIZES
+  --fs-8: 8px;
+  --fs-11: 11px;
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-23: 23px;
+  --fs-28: 28px;
+  --fs-31: 31px;
+  --fs-35: 35px;
+  --fs-36: 36px;
+  --fs-40: 40px;
+
+  // FONT WEIGHTS
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  // LINE HEIGHT
+  --lh-10: 10px;
+  --lh-13: 13px;
+  --lh-14: 14px;
+  --lh-15: 15px;
+  --lh-16: 16px;
+  --lh-16-25: 16.25px;
+  --lh-17: 17px;
+  --lh-18: 18px;
+  --lh-19: 19px;
+  --lh-20: 20px;
+  --lh-21: 21px;
+  --lh-23: 23px;
+  --lh-24: 24px;
+  --lh-26: 26px;
+  --lh-27: 27px;
+  --lh-36: 36px;
+  --lh-42: 42px;
+  --lh-45: 45px;
+  --lh-47: 47px;
+
+  @include breakpoint(tab_land) {
+    // FONT SIZES
+    --fs-16: 14px;
+    --fs-35: 25px;
+    --fs-18: 16px;
+    --fs-20: 18px;
+    --fs-23: 20px;
+    --fs-28: 23px;
+    --fs-35: 25px;
+    --fs-36: 26px;
+    --fs-40: 30px;
+
+    // LINE HEIGHTS
+  }
+}

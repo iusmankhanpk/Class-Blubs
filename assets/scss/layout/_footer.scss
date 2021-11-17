@@ -1,0 +1,262 @@
+.footer {
+  @extend .relative;
+  background-image: url(/assets/img/footer-background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  ul {
+    @extend .list-none;
+    width: max-content;
+
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+      a {
+        @extend .fs-13;
+        @extend .fw-semibold;
+        @extend .lh-15;
+        @extend .no-deco;
+        transition: all ease 0.3s;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &-main {
+    @extend .relative;
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-rows: auto;
+    grid-template-columns: 204px repeat(5, minmax(max-content, max-content));
+    grid-template-areas: "info company teach parents help follow";
+    column-gap: 15px;
+    padding: 175.8px 0px 108px;
+    max-width: 1004px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint(tab_land) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "info info info"
+        "company teach ..."
+        "parents help follow";
+      gap: 30px;
+    }
+
+    @include breakpoint(phone) {
+      grid-template-areas:
+        "info info info"
+        "company teach ..."
+        "parents help ..."
+        "follow ... ...";
+    }
+    h3 {
+      @extend .fs-20;
+      @extend .fw-regular;
+      @extend .clr-gray;
+      @extend .lh-23;
+      @extend .capitalize;
+      @extend .font-bubble;
+      margin-bottom: 14px;
+    }
+  }
+  &-info {
+    max-width: 204px;
+    width: 100%;
+    grid-area: info;
+
+    img {
+      @include img(84, auto);
+      margin-bottom: 19px;
+    }
+    p {
+      @extend .fs-13;
+      @extend .lh-15;
+      @extend .fw-semibold;
+      @extend .clr-gray;
+    }
+    @include breakpoint(tab_land) {
+      max-width: 470px;
+    }
+  }
+
+  &-company {
+    grid-area: company;
+    ul li a {
+      color: var(--green-dark);
+    }
+  }
+  &-teach {
+    grid-area: teach;
+    ul li a {
+      color: var(--yellow-light);
+    }
+  }
+  &-parents {
+    grid-area: parents;
+    ul li a {
+      color: var(--green-light);
+    }
+  }
+  &-help {
+    grid-area: help;
+    ul li a {
+      color: var(--pink);
+    }
+  }
+  &-follow {
+    grid-area: follow;
+    ul {
+      display: flex;
+
+      li {
+        &:not(:last-of-type) {
+          margin-right: 10px;
+        }
+        a {
+          @extend .clr-gray;
+
+          i {
+            @extend .fs-12;
+          }
+        }
+      }
+    }
+  }
+  svg {
+    --width: 200px;
+    width: var(--width);
+    aspect-ratio: 400/274.33;
+    position: absolute;
+    bottom: 0px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: run;
+    animation-duration: 18s;
+    overflow: visible;
+  }
+
+  :is(svg) :is(#square, #triangle) path,
+  #circle,
+  #cross,
+  #gas {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+  }
+
+  :is(svg) :is(#square, #triangle) path {
+    animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 6s;
+  }
+
+  :is(svg) #circle,
+  #cross {
+    animation-name: bounce;
+    animation-duration: 3s;
+  }
+
+  :is(svg) #cross {
+    animation-delay: 1.5s;
+  }
+
+  :is(svg) #gas {
+    animation-name: gas;
+    animation-duration: 2s;
+    animation-delay: 2s;
+  }
+
+  #triangle path {
+    transform-origin: 58% 51% !important;
+  }
+
+  @keyframes run {
+    0% {
+      right: 0;
+      transform: rotateY(180deg);
+    }
+
+    49% {
+      transform: rotateY(180deg);
+    }
+
+    50% {
+      right: calc(100% - var(--width));
+    }
+
+    51% {
+      transform: rotateY(0deg);
+    }
+
+    98% {
+      transform: rotateY(0deg);
+    }
+
+    100% {
+      right: 0;
+      transform: rotateY(180deg);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      transform: translateY(0px);
+    }
+
+    40% {
+      transform: translateY(60px);
+    }
+
+    60% {
+      transform: translateY(30px);
+    }
+  }
+
+  @keyframes gas {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      transform: translate(0px);
+    }
+
+    40% {
+      transform: translate(-22px, 25px) scale(1.4);
+    }
+
+    60% {
+      transform: translate(-11px, 12.5px) scale(1.2);
+    }
+  }
+}
+.copyright {
+  @extend .fs-11;
+  @extend .fw-bold;
+  @extend .lh-13;
+  @extend .clr-white;
+  @extend .block;
+  @extend .text-center;
+  background-color: var(--green-light);
+  padding: 12px 15px 11.1px;
+}

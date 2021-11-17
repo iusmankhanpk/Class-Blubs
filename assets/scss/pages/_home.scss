@@ -1,0 +1,397 @@
+#home {
+  .hero {
+    @extend .relative;
+
+    padding: 184px 0px 190.3px;
+    background-image: url(/assets/img/hero-background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background-image: linear-gradient(
+        to right,
+        var(--lg-1) 16.66%,
+        var(--lg-2) 16.66% 33.33%,
+        var(--lg-3) 33.33% 50%,
+        var(--lg-4) 50% 66.66%,
+        var(--lg-5) 66.66% 83.33%,
+        var(--lg-6) 83.33% 100%
+      );
+      z-index: -2;
+    }
+    &-main {
+      max-width: 372px;
+      width: 100%;
+
+      span {
+        @extend .d-none;
+        @extend .fs-23;
+        @extend .fw-regular;
+        @extend .uppercase;
+        @extend .lh-23;
+        @extend .font-bubble;
+
+        margin-bottom: 12px;
+        color: var(--green-dark);
+
+        @include breakpoint(tab_land) {
+          display: block;
+        }
+      }
+      h1 {
+        @extend .fs-36;
+        @extend .fw-black;
+        @extend .lh-42;
+        @extend .clr-black;
+        @extend .uppercase;
+        margin-bottom: 16px;
+      }
+      p {
+        @extend .fs-16;
+        @extend .fw-medium;
+        @extend .lh-19;
+        color: var(--yellow-dark);
+        margin-bottom: 24px;
+      }
+      @include breakpoint(tab_land) {
+        max-width: 280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    @include breakpoint(tab_land) {
+      padding: 31px 0px 229px;
+      background-image: url(/assets/img/hero-background-mobile.png);
+    }
+  }
+  .classes {
+    padding: 71px 0px;
+    background-image: url(/assets/img/backgroung-image.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    h1.section-heading {
+      margin-bottom: 86.1px;
+    }
+    &-main {
+      @extend .flex;
+      flex-wrap: wrap;
+      max-width: 812px;
+      width: 100%;
+      margin: 0 auto;
+      background-color: var(--white);
+
+      .card-classes {
+        width: 23.15%;
+
+        &:nth-child(1n) {
+          background-color: var(--yellow-medium-14);
+          p {
+            color: var(--yellow-medium);
+          }
+        }
+        &:nth-child(3n) {
+          background-color: var(--green-dark-14);
+          p {
+            color: var(--green-dark);
+          }
+        }
+        &:nth-child(2n) {
+          background-color: var(--green-light-14);
+          p {
+            color: var(--green-light);
+          }
+        }
+        &:nth-child(3n + 1) {
+          background-color: var(--pink-14);
+          p {
+            color: var(--pink);
+          }
+        }
+        &:nth-child(5n) {
+          background-color: var(--gray-14);
+          p {
+            color: var(--gray);
+          }
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2) {
+          width: 48.3%;
+          margin-bottom: 0;
+
+          p {
+            max-width: 155px;
+          }
+          @include breakpoint(phone) {
+            width: 70%;
+            margin-bottom: 20px;
+          }
+        }
+        @include breakpoint(tab_land) {
+          width: 48.3%;
+
+          p {
+            max-width: 155px;
+          }
+        }
+        @include breakpoint(phone) {
+          width: 70%;
+        }
+      }
+      @include breakpoint(phone) {
+        justify-content: center;
+      }
+    }
+  }
+  .launching {
+    padding: 20px 0px;
+    h1.section-heading {
+      margin-bottom: 43px;
+
+      @include breakpoint(tab_land) {
+        margin-bottom: 57px;
+      }
+    }
+    p {
+      @extend .fs-12;
+      @extend .fw-regular;
+      @extend .lh-17;
+      @extend .clr-gray;
+      @extend .text-center;
+
+      max-width: 304px;
+      margin: 0 auto 31px;
+
+      @include breakpoint(tab_land) {
+        margin-bottom: 35px;
+      }
+    }
+    &-subscribe,
+    .mc4wp-form-fields {
+      @extend .flex;
+
+      align-items: flex-start;
+      max-width: 761px;
+      width: 100%;
+      margin: 0 auto 32px;
+
+      input {
+        width: 32.45%;
+
+        @include breakpoint(tab_land) {
+          max-width: 247px;
+          width: 100%;
+        }
+      }
+      input[type="text"],
+      input[type="email"] {
+        margin-right: 10px;
+        border: none;
+        border-radius: 3px;
+        padding: 11px 18px 10px;
+        box-shadow: 4px 4px 6px var(--input-bs);
+
+        @include breakpoint(tab_land) {
+          margin-bottom: 18px;
+        }
+      }
+      @include breakpoint(tab_land) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &-app {
+      width: fit-content;
+      margin: 0 auto;
+
+      a {
+        display: inline-block;
+
+        &:first-of-type {
+          margin-right: 8.5px;
+        }
+      }
+    }
+  }
+  .provide {
+    @extend .relative;
+
+    background-image: url(/assets/img/background-image-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 78.2px;
+    padding: 153px 0px 107px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 704px;
+      height: 666px;
+      background-color: var(--white);
+      border-radius: 50%;
+      top: -120px;
+      right: -284px;
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+
+    &-main {
+      @extend .relative;
+      z-index: 2;
+      max-width: 717px;
+      margin: 0 auto;
+
+      h1.section-heading {
+        max-width: 493px;
+        color: var(--white);
+        margin-bottom: 46px;
+      }
+      p {
+        @extend .fs-14;
+        @extend .fw-regular;
+        @extend .lh-17;
+        @extend .clr-black;
+        @extend .text-center;
+      }
+    }
+    span {
+      width: 482px;
+      height: 427px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      img {
+        @include img(100%, 100%);
+      }
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+  }
+  .testimonials {
+    padding: 90px 0px;
+
+    h1.section-heading {
+      margin-bottom: 101px;
+    }
+    &-main {
+      @extend .flex;
+
+      margin-bottom: 64px;
+      .card-parents {
+        &:nth-child(1) {
+          &::after {
+            background-color: var(--pink);
+          }
+          span {
+            color: var(--pink);
+          }
+        }
+        &:nth-child(2) {
+          &::after {
+            background-color: var(--green-dark);
+          }
+          span {
+            color: var(--green-dark);
+          }
+        }
+        &:nth-child(3) {
+          &::after {
+            background-color: var(--yellow-light);
+          }
+          span {
+            color: var(--yellow-light);
+          }
+        }
+        &:not(:last-of-type) {
+          margin-right: 16px;
+
+          @include breakpoint(tab_land) {
+            margin: 0 0 48px;
+          }
+        }
+      }
+      @include breakpoint(tab_land) {
+        flex-direction: column;
+      }
+    }
+    a.section-heading {
+      @extend .no-deco;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        margin-left: 5.1px;
+      }
+    }
+  }
+}
+
+.notfound {
+  margin: auto;
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding: 88px 0px;
+
+  &-404 {
+    position: relative;
+    height: 240px;
+    h3 {
+      font-family: cabin, sans-serif;
+      position: relative;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin: 0;
+      letter-spacing: 3px;
+      padding-left: 6px;
+    }
+    h1 {
+      font-family: montserrat, sans-serif;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 252px;
+      font-weight: 900;
+      margin: 0;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: -40px;
+      margin-left: -20px;
+      & > span {
+        text-shadow: -8px 0 0 var(--white);
+      }
+    }
+  }
+  h2 {
+    font-family: cabin, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+}

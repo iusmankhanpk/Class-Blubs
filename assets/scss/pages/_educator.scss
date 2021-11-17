@@ -1,0 +1,81 @@
+#educator-partner {
+  .educator-partner {
+    padding: 71px 0px 91px;
+    background-image: url(/assets/img/backgroung-image.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-main {
+      max-width: 1055px;
+      width: 100%;
+      margin: 71px auto 0;
+
+      .card-educator {
+        &:nth-of-type(even) {
+          .card-educator-content {
+            flex-direction: row-reverse;
+
+            img {
+              margin: 0px 0px 0px 10px;
+
+              @include breakpoint(tab_port) {
+                margin: 0px 0px 20px;
+              }
+            }
+            @include breakpoint(tab_port) {
+              flex-direction: column;
+            }
+          }
+          &::after {
+            left: unset;
+            right: -8px;
+          }
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 17px;
+        }
+        &:nth-child(1n) {
+          &::after {
+            background-color: var(--pink);
+          }
+          span {
+            color: var(--pink);
+          }
+        }
+        &:nth-child(2n) {
+          &::after {
+            background-color: var(--green-light);
+          }
+          span {
+            color: var(--green-light);
+          }
+        }
+        &:nth-child(3n) {
+          &::after {
+            background-color: var(--yellow-light);
+          }
+          span {
+            color: var(--yellow-light);
+          }
+        }
+        &:nth-child(4n) {
+          &::after {
+            background-color: var(--green-dark);
+          }
+          span {
+            color: var(--green-dark);
+          }
+        }
+        &:nth-child(5n) {
+          &::after {
+            background-color: var(--gray);
+          }
+          span {
+            color: var(--gray);
+          }
+        }
+      }
+    }
+  }
+}
